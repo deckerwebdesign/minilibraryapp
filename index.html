@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Log</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <div class="container">
+    <h1>📚 Book Log</h1>
+    <p>Track what you're reading, want to read, or finished.</p>
+
+    <div id="summary" class="summary"></div>
+
+    <section class="add-book">
+      <h2>Add a Book</h2>
+      <form id="bookForm">
+        <label>
+          Title
+          <input type="text" id="title" placeholder="Book title" required />
+        </label>
+        <label>
+          Author
+          <input type="text" id="author" placeholder="Book author" required />
+        </label>
+        <label>
+          Status
+          <select id="status">
+            <option value="Want to read" selected>Want to read</option>
+            <option value="Reading">Reading</option>
+            <option value="Finished">Finished</option>
+          </select>
+        </label>
+        <label>
+          Rating
+          <select id="rating">
+            <option value="0" selected>No rating</option>
+            <option value="1">1 star</option>
+            <option value="2">2 stars</option>
+            <option value="3">3 stars</option>
+            <option value="4">4 stars</option>
+            <option value="5">5 stars</option>
+          </select>
+        </label>
+        <label>
+          Notes
+          <textarea id="notes" placeholder="Optional: add your thoughts after finishing"></textarea>
+        </label>
+        <button type="submit">Add book</button>
+      </form>
+    </section>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Status</th>
+          <th>Rating</th>
+          <th>Notes</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="bookTable"></tbody>
+    </table>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
